@@ -16,8 +16,14 @@ export class HomeComponent implements OnInit {
   }
   message:string;
 
-  ngOnInit() {if(this.storage.get('uname')=="athul"||"amal"){
-    this.message="love you all";
+  ngOnInit() {if(this.storage.get('uname')=="athul"){
+    this.message="Mr.Athul";
+  }
+  else if(this.storage.get('uname')=="amal"){
+    this.message="Mr.Amal";
+  }
+  else{
+    this.router.navigate(['']);
   }
   }
   LogOut(){
